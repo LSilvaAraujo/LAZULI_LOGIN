@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(182, 188, 196);
+    background-color: rgb(255, 255, 255);
 }
 
 #login {
@@ -10,14 +10,14 @@ body {
     text-align: start;
     justify-content: center;
     height: 100vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card {
-    background-color: rgb(10, 19, 98);
+    background-color: #041540;
     padding: 40px;
-    border-radius: 2px;
-    width:280px;
+    border-radius: 11px;
+    width: 300px;
 }
 
 .card-header {
@@ -56,18 +56,19 @@ body {
 .card-footer .submit{
     width: 100%;
     height: 40px;
-    background-color: #1550da;
+    background-color: #00319b;
+
     border:none;
     color:#e1e1e1;
     margin: 18px 2px;
-
+    border-radius: 20px;
     padding: 10px 10px;
     transition: 0.2s;
     font-weight: 600;
 }
 
 .card-footer .submit:hover{
-    background-color: #002a8d;
+    background-color: #00237C;
     cursor: pointer;
 }
 .card-footer a {
