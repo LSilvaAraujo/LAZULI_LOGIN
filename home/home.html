@@ -1,24 +1,36 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="home.scss">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/8d11eb6e7a.css" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
     <title>Home</title>
+
 </head>
+
 <body>
-    <div id="home-geral">
-        <div class="links-header">
+    <div id="home">
+        <div class="header">
+<!--            <span class="logo-header">-->
+<!--                <img src="lazuli-logo.png" alt="Logo Lazuli">-->
+<!--            </span>-->
             <span><a href="#">Início</a></span>
             <span><a href="#">Loja</a></span>
             <span><a href="#">Fale conosco</a></span>
-            <span><a href="#">Campo de Pesquisa</a></span>
+
+            <span id="div-busca">
+                <input type="text" id="txt-busca" placeholder="Pesquisar">
+            </span>
+
             <span><a href="#">Carrinho</a></span>
-            <span><a href="#">Usuário</a></span>
+            <span class="user"><a href="#">Usuário</a></span>
         </div>
     </div>
 </body>
