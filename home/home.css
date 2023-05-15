@@ -7,6 +7,10 @@
     text-align: right;
 
 }
+.logo-header img{
+    /*width: 8em;*/
+
+}
 
 .header a{
     text-decoration: none;
