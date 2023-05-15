@@ -12,7 +12,7 @@
 
     <body>
         <div id="login">
-            <form class="card">
+            <form class="card" method="POST">
                 <div class="card-header">
                     <img src="../../static/images/lazuli-novo.png" alt="Logo Lazuli">
                     <h3>Registrar uma nova conta</h3>
@@ -20,24 +20,24 @@
 
                 <div class="card-content">
                     <div class="card-content-area">
-                        <label for="password">Nome:</label>
-                        <input type="password" id="new-name" title="Preencha o campo de nome" required name="password" autocomplete="off">
+                        <label for="new-name">Nome:</label>
+                        <input type="text" id="new-name" title="Preencha o campo de nome" required name="new-name" autocomplete="off">
                     </div>
                     <div class="card-content-area">
-                        <label for="password">Usuário:</label>
-                        <input type="password" id="new-user" title="Preencha o campo de usuário" required name="password" autocomplete="off">
+                        <label for="new-user">Usuário:</label>
+                        <input type="text" id="new-user" title="Preencha o campo de usuário" required name="new-user" autocomplete="off">
                     </div>
                     <div class="card-content-area">
-                        <label for="usuario">Email:</label>
-                        <input type="text" id="usuario" title="Preencha o campo do usuário" required name="user" autocomplete="off">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" title="Preencha o campo do usuário" required name="email" autocomplete="off">
                     </div>
                     <div class="card-content-area">
                         <label for="password">Senha:</label>
                         <input type="password" id="password" title="Preencha o campo de senha" required name="password" autocomplete="off">
                     </div>
                     <div class="card-content-area">
-                        <label for="password">Repita a senha:</label>
-                        <input type="password" id="repeat-password" title="Preencha o campo de senha" required name="password" autocomplete="off">
+                        <label for="repeat-password">Repita a senha:</label>
+                        <input type="password" id="repeat-password" title="Preencha o campo de senha" required name="repeat-password" autocomplete="off">
                     </div>
                 </div>
 
