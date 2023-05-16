@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from db.QueryManager import QueryManager
 from Functions.ValidationManager import ValidationManager
 
@@ -46,7 +46,7 @@ def signup():
     if valid:
         manager = QueryManager()
         manager.register_user(user_data)
-        return {"valid": 1}
+        return redirect('/login')
     else:
         return show_signup()
 

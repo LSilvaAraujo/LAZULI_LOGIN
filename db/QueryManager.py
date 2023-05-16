@@ -31,7 +31,7 @@ class QueryManager:
     def register_user(self, data):
         self.cursor.execute('INSERT INTO users (user, nome, email, senha) '
                             'VALUES (?,?,?,?)',
-                            (data['new-name'], data['new-user'], data['email'],
+                            (data['new-user'], data['new-name'], data['email'],
                              data['password']))
         self.conn.commit()
         self.cursor.close()
