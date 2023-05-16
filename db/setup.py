@@ -18,6 +18,8 @@ cursor.execute('''
     )
 ''')
 
+# INSERIR NULL COMO ID (AUTOINCREMENT)
+
 # Commit the changes to the database
 conn.commit()
 
