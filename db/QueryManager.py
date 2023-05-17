@@ -7,6 +7,10 @@ class QueryManager:
         self.conn = sqlite3.connect("db/lazuli.db")
         self.cursor = self.conn.cursor()
 
+    def close_connections(self):
+        self.cursor.close()
+        self.conn.close()
+
     def valid_credentials(self, username, password):
         self.cursor.execute('SELECT senha FROM users WHERE user = ?',
                             (username,))
@@ -14,22 +18,14 @@ class QueryManager:
         if result is None:
             return False
         valid = HashingManager.is_valid_password(password, result[0])
-        self.cursor.close()
-        self.conn.close()
+        self.close_connections()
         return valid
 
-    def exists_username(self, username):
-        self.cursor.execute('SELECT * FROM users WHERE user = ?', (username,))
+    def exists_value(self, table, field, value):
+        query = 'SELECT * FROM {} WHERE {} = ?'.format(table, field)
+        self.cursor.execute(query, (value,))
         result = self.cursor.fetchone()
-        self.cursor.close()
-        self.conn.close()
-        return result is not None
-
-    def exists_email(self, email):
-        self.cursor.execute('SELECT * FROM users WHERE email = ?', (email,))
-        result = self.cursor.fetchone()
-        self.cursor.close()
-        self.conn.close()
+        self.close_connections()
         return result is not None
 
     def register_user(self, data):
@@ -42,8 +38,7 @@ class QueryManager:
                             'VALUES (?,?,?,?)',
                             (data['new-user'], data['new-name'], data['email'],
                              data['password']))
-        self.conn.commit()
-        self.cursor.close()
+        self.close_connections()
 
         # INSERT INTO people (first_name, last_name) VALUES ("John", "Smith");
         # ['new-name', 'new-user', 'email', 'password', 'repeat-password']
@@ -51,6 +46,5 @@ class QueryManager:
     def get_password(self, username):
         self.cursor.execute('SELECT senha FROM users WHERE user = ?', (username,))
         result = self.cursor.fetchone()
-        self.cursor.close()
-        self.conn.close()
+        self.close_connections()
         return result
