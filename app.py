@@ -32,12 +32,12 @@ def login():
     # TODO: implementação hash & salt para senhas armazenadas no banco de dados
 
 
-@app.route('/new_user/user.html')
+@app.route('/new_user')
 def show_signup():
     return render_template("new_user/user.html")
 
 
-@app.route('/new_user/user.html', methods=['POST'])
+@app.route('/new_user', methods=['POST'])
 def signup():
     fields = ['new-name', 'new-user', 'email', 'password', 'repeat-password']
     user_data = {}
