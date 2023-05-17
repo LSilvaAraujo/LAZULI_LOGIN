@@ -24,7 +24,7 @@ class ValidationManager:
     def email_valid(self):
         email = self.data['email']
         manager = QueryManager()
-        existing_email = manager.exists_email(email)
+        existing_email = manager.exists_value('users', 'email', email)
         if existing_email:
             return False
         try:
@@ -44,7 +44,7 @@ class ValidationManager:
             return False
 
         manager = QueryManager()
-        existing_username = manager.exists_username(username)
+        existing_username = manager.exists_value('users', 'user', username)
         if existing_username:
             return False
 
