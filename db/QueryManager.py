@@ -10,11 +10,10 @@ class QueryManager:
     def valid_credentials(self, username, password):
         self.cursor.execute('SELECT senha FROM users WHERE user = ?',
                             (username,))
-        result = self.cursor.fetchone()[0]
-        print(password, result[0])
+        result = self.cursor.fetchone()
         if result is None:
             return False
-        valid = HashingManager.is_valid_password(password, result)
+        valid = HashingManager.is_valid_password(password, result[0])
         self.cursor.close()
         self.conn.close()
         return valid
