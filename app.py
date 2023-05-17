@@ -51,7 +51,7 @@ def signup():
     if valid:
         manager = QueryManager()
         manager.register_user(user_data)
-        return redirect('/login')
+        return redirect('/')
     else:
         return show_signup()
 
