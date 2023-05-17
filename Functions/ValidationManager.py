@@ -57,8 +57,6 @@ class ValidationManager:
 
         name = self.data['new-name']
 
-        print(name)
-
         if not pattern.match(name):
             return False
 

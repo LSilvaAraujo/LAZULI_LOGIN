@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from db.QueryManager import QueryManager
 from Functions.ValidationManager import ValidationManager
+from config import SECRET_KEY
 
 app = Flask(__name__)
+app.secret_key = SECRET_KEY
 
 
 @app.route('/')
@@ -22,6 +24,8 @@ def login():
     query_manager = QueryManager()
     valid = query_manager.valid_credentials(user, password)
     if valid:
+        session['username'] = user
+        session['authenticated'] = True
         return {"valid": valid}  # para propósitos de teste
     else:
         return show_login()
@@ -49,6 +53,12 @@ def signup():
         return redirect('/login')
     else:
         return show_signup()
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/login')
 
 
 if __name__ == '__main__':
