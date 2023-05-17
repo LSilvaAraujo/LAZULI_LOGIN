@@ -38,6 +38,7 @@ class QueryManager:
                             'VALUES (?,?,?,?)',
                             (data['new-user'], data['new-name'], data['email'],
                              data['password']))
+        self.conn.commit()
         self.close_connections()
 
         # INSERT INTO people (first_name, last_name) VALUES ("John", "Smith");
