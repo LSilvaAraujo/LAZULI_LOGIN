@@ -27,7 +27,7 @@ def login():
     valid = query_manager.valid_credentials(user, password)
     if valid:
         session['username'] = user
-        return redirect('/home')  # para propósitos de teste
+        return redirect('/home')
     else:
         return show_login()
     # TODO: implementação hash & salt para senhas armazenadas no banco de dados
