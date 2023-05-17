@@ -5,9 +5,6 @@ class HashingManager:
     def __init__(self, password):
         self.data = {}
         hashed = pbkdf2_sha256.encrypt(password, rounds=10000, salt_size=16)
-        # hashed = hashed.split("$")
-
-        # hashed_password = hashed[4]
 
         self.data["password"] = hashed
 

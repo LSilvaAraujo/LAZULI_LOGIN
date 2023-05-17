@@ -7,17 +7,19 @@ app = Flask(__name__)
 app.secret_key = SECRET_KEY
 
 
-@app.route('/')
+@app.route('/home')
 def home_page():
-    return render_template("home/home.html")
+    if len(session) != 0:
+        return render_template("home/home.html")
+    return redirect("/")
 
 
-@app.route('/login')
+@app.route('/')
 def show_login():
     return render_template("login/login.html")
 
 
-@app.route('/login', methods=['POST'])
+@app.route('/', methods=['POST'])
 def login():
     user = request.form.get('user')
     password = request.form.get('password')
@@ -25,8 +27,7 @@ def login():
     valid = query_manager.valid_credentials(user, password)
     if valid:
         session['username'] = user
-        session['authenticated'] = True
-        return {"valid": valid}  # para propósitos de teste
+        return redirect('/home')  # para propósitos de teste
     else:
         return show_login()
     # TODO: implementação hash & salt para senhas armazenadas no banco de dados
@@ -58,7 +59,7 @@ def signup():
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect('/login')
+    return redirect('/')
 
 
 if __name__ == '__main__':
