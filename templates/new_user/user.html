@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../static/css/user.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <title>Login Lazuli</title>
+
+    </head>
+
+    <body>
+        <div id="login">
+            <form class="card" method="POST">
+                <div class="card-header">
+                    <img src="../../static/images/lazuli-novo.png" alt="Logo Lazuli">
+                    <h3>Registrar uma nova conta</h3>
+                </div>
+
+                <div class="card-content">
+                    <div class="card-content-area">
+                        <label for="new-name">Nome:</label>
+                        <input type="text" id="new-name" title="Preencha o campo de nome" required name="new-name" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="new-user">Usuário:</label>
+                        <input type="text" id="new-user" title="Preencha o campo de usuário" required name="new-user" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" title="Preencha o campo do usuário" required name="email" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" title="Preencha o campo de senha" required name="password" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="repeat-password">Repita a senha:</label>
+                        <input type="password" id="repeat-password" title="Preencha o campo de senha" required name="repeat-password" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="button-login">
+                        <input type="submit" value="Entrar" class="submit">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
