@@ -43,7 +43,10 @@ def signup():
     fields = ['new-name', 'new-user', 'email', 'password', 'repeat-password']
     user_data = {}
     for field in fields:
-        user_data[field] = request.form.get(field)
+        if field == 'new-user':
+            user_data[field] = request.form.get(field).lower()
+        else:
+            user_data[field] = request.form.get(field)
 
     validation_manager = ValidationManager(user_data)
     valid = validation_manager.all_valid()
