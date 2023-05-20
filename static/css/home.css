@@ -1,16 +1,22 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
 .header{
     background-color: #041540;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    font-family: 'Poppins', sans-serif;
-    text-align: right;
-
+    padding: 1%;
 }
-.logo-header img{
-    /*width: 8em;*/
 
+.links-header {
+    margin-left: 52%;
 }
+
+.body-bg img {
+    background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+}
+
 
 .header a{
     text-decoration: none;
@@ -22,14 +28,148 @@
     color: #d7d7d7;
 }
 
+.header ion-icon:hover{
+    color: #d7d7d7;
+}
+
 .header .user{
     margin-right: 1%;
 }
 
 #div-busca input{
-    border-radius: 8px;
+    border-radius: 10px;
     border-style: none;
     padding: 0.4rem;
     margin-left: 1% ;
     width: 15%;
 }
+
+.body-bg{
+    position: relative;
+    background-color: #F6F6F6;
+}
+
+.body-bg img{
+    position: absolute;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    display: block;
+    margin-top: 2%;
+}
+
+.body-bg .text-welcome{
+    color: #ffffff;
+    position: absolute;
+    font-weight: bold;
+    background-color: rgb(74, 119, 218);
+    width: 90%;
+    font-size: 300%;
+    left: 5%;
+    top: 4em;
+    text-align: center;
+    animation: animate 6s ease-out infinite;
+}
+
+@keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   30%{
+     opacity: 1;
+   }
+    70%{
+    opacity: 1;
+    }
+   100%{
+     opacity: 0;
+   }
+ }
+
+
+.user ion-icon {
+    color: white;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.cart ion-icon {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.search ion-icon {
+    color: #041540;
+    position: relative;
+    left: -25px;
+    top: 3px;
+}
+.search ion-icon:hover {
+    color: #2552ce;
+    cursor: pointer;
+}
+
+.features-charts {
+    display: block;
+    margin-top: 25%;
+    text-align: center ;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.features-charts span {
+    background-color: lightgrey;
+    border-radius: 20px;
+    border-style: none;
+    /*padding-top: 4%;*/
+    /*padding-left: 3%;*/
+    /*margin-right: 0.3%;*/
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.free-shipping, .no-fees, .purchase-security {
+    background-color: lightgrey;
+    border-radius: 10px;
+    border-style: none;
+    padding: 1.5rem;
+    margin-left: 10%;
+    width: 15%;
+    text-align: center;
+    line-break: auto;
+}
+
+.free-shipping {
+    margin-left: 0;
+}
+
+.features-charts ion-icon {
+    position: relative;
+    bottom: -2px;
+}
+
+/*.no-fees {*/
+/*    background-color: lightgrey;*/
+/*    border-radius: 10px;*/
+/*    border-style: none;*/
+/*    padding: 0.4rem;*/
+/*    margin-left: 10%;*/
+/*    width: 15%;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.purchase-security {*/
+/*    background-color: lightgrey;*/
+/*    border-radius: 10px;*/
+/*    border-style: none;*/
+/*    padding: 0.4rem;*/
+/*    margin-left: 10%;*/
+/*    width: 15%;*/
+/*    text-align: center;*/
+/*}*/
+
+
