@@ -62,6 +62,8 @@ class ValidationManager:
 
         return True
 
+    # TODO: Validação de CPF: validate-docbr
+
     def all_valid(self):
         methods = [self.name_valid, self.password_valid,
                    self.email_valid, self.username_valid]
