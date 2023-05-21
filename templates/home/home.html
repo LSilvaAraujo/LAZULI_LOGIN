@@ -15,23 +15,57 @@
 
 </head>
 
-<body>
+<form>
     <div id="home">
         <div class="header">
-            <span class="logo-header">
-                <img src="../../static/images/lazuli-logo.png" alt="Logo Lazuli">
+            <span class="links-header">
+                <span><a href="#">Início</a></span>
+                <span><a href="#">Loja</a></span>
+                <span><a href="#features-charts">Fale conosco</a></span>
+                <span id="div-busca">
+                    <input type="text" id="txt-busca" placeholder="">
+                </span>
+                <span class="search"><ion-icon name="search"></ion-icon></span>
+                <span class="cart"><ion-icon name="cart"></ion-icon><a href="#"></a></span>
+                <span class="user"><ion-icon name="person"></ion-icon><a href="#"></a></span>
             </span>
-            <span><a href="#">Início</a></span>
-            <span><a href="#">Loja</a></span>
-            <span><a href="#">Fale conosco</a></span>
-
-            <span id="div-busca">
-                <input type="text" id="txt-busca" placeholder="Pesquisar">
-            </span>
-
-            <span><a href="#">Carrinho</a></span>
-            <span class="user"><a href="#">Usuário</a></span>
         </div>
     </div>
+        <div class="body-bg">
+            <img src="/static/images/home-img.png" alt="Imagem do Espaço">
+            <label class="text-welcome">Bem vindo à Lazuli!</label>
+        </div>
+
+        <div id="features-charts">
+            <span class="free-shipping">
+                <ion-icon name="car-outline"></ion-icon>
+                Frete Grátis Acima de R$100
+            </span>
+            <span class="no-fees">
+                <ion-icon name="card-outline"></ion-icon>
+                Até 3x sem Juros
+            </span>
+            <span class="purchase-security">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                Compra Segura
+            </span>
+        </div>
+    <div class="chart">
+        <form class="fale-conosco">
+          <div class="retangulo-esquerda">
+            <span class="sublinhado">Fale Conosco</span>
+          </div>
+          <div class="retangulo-inputs">
+            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Telefone">
+          </div>
+          <div class="retangulo-mensagem">
+            <textarea placeholder="Mensagem"></textarea>
+            <button>Enviar</button>
+          </div>
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-</html>
