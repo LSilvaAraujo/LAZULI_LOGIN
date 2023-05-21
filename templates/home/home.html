@@ -15,13 +15,13 @@
 
 </head>
 
-<body>
+<form>
     <div id="home">
         <div class="header">
             <span class="links-header">
                 <span><a href="#">Início</a></span>
                 <span><a href="#">Loja</a></span>
-                <span><a href="#">Fale conosco</a></span>
+                <span><a href="#features-charts">Fale conosco</a></span>
                 <span id="div-busca">
                     <input type="text" id="txt-busca" placeholder="">
                 </span>
@@ -29,15 +29,14 @@
                 <span class="cart"><ion-icon name="cart"></ion-icon><a href="#"></a></span>
                 <span class="user"><ion-icon name="person"></ion-icon><a href="#"></a></span>
             </span>
-</div>
         </div>
+    </div>
         <div class="body-bg">
             <img src="/static/images/home-img.png" alt="Imagem do Espaço">
-            <br><br><br>
             <label class="text-welcome">Bem vindo à Lazuli!</label>
         </div>
 
-        <div class="features-charts">
+        <div id="features-charts">
             <span class="free-shipping">
                 <ion-icon name="car-outline"></ion-icon>
                 Frete Grátis Acima de R$100
@@ -51,6 +50,22 @@
                 Compra Segura
             </span>
         </div>
+    <div class="chart">
+        <form class="fale-conosco">
+          <div class="retangulo-esquerda">
+            <span class="sublinhado">Fale Conosco</span>
+          </div>
+          <div class="retangulo-inputs">
+            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Telefone">
+          </div>
+          <div class="retangulo-mensagem">
+            <textarea placeholder="Mensagem"></textarea>
+            <button>Enviar</button>
+          </div>
+        </form>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

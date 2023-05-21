@@ -113,15 +113,15 @@ body{
     cursor: pointer;
 }
 
-.features-charts {
+#features-charts {
     display: block;
-    margin-top: 25%;
+    margin-top: 33%;
     text-align: center ;
     justify-content: space-between;
     vertical-align: middle;
 }
 
-.features-charts span {
+#features-charts span {
     background-color: lightgrey;
     border-radius: 20px;
     border-style: none;
@@ -147,29 +147,68 @@ body{
     margin-left: 0;
 }
 
-.features-charts ion-icon {
+#features-charts ion-icon {
     position: relative;
     bottom: -2px;
 }
 
-/*.no-fees {*/
-/*    background-color: lightgrey;*/
-/*    border-radius: 10px;*/
-/*    border-style: none;*/
-/*    padding: 0.4rem;*/
-/*    margin-left: 10%;*/
-/*    width: 15%;*/
-/*    text-align: center;*/
-/*}*/
+/*SEÇAO FALE CONOSCO*/
 
-/*.purchase-security {*/
-/*    background-color: lightgrey;*/
-/*    border-radius: 10px;*/
-/*    border-style: none;*/
-/*    padding: 0.4rem;*/
-/*    margin-left: 10%;*/
-/*    width: 15%;*/
-/*    text-align: center;*/
-/*}*/
+.chart{
+    align-items: start;
+    margin: 5%;
+    border-radius: 17px;
+    background-color: #ececec;
+    padding: 0.5rem 1.8rem;
+    margin-bottom: 5%;
+    width: 85%;
+}
 
+.retangulo-esquerda, .retangulo-mensagem{
+    display: inline-block;
+}
+
+.chart .retangulo-esquerda span{
+    text-decoration: underline;
+    font-size: large;
+    color: #061c5d;
+}
+
+.chart .retangulo-inputs input {
+    /*display: flex;*/
+    margin-top: 1%;
+    padding: 0.5rem 1.8rem;
+    border-radius: 17px;
+    border: none;
+    background-color: lightgrey;
+}
+
+.chart .retangulo-mensagem {
+    margin-top: 1%;
+}
+
+.chart .retangulo-mensagem textarea {
+
+    width: 300%;
+    border-radius: 17px;
+    border: none;
+    background-color: lightgrey;
+    padding-bottom: 60%;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+
+.chart .retangulo-mensagem button {
+    border-radius: 17px;
+    border: none;
+    background-color: #00319b;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #ffffff;
+
+}
+
+.chart .retangulo-mensagem button:hover{
+    background-color: #002c86;
+}
 
