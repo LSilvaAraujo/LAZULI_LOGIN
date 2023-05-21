@@ -21,7 +21,7 @@ conn.commit()
 
 # Create a table for addresses
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS addresses (
+    CREATE TABLE IF NOT EXISTS enderecos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         telefone TEXT NOT NULL,
@@ -37,17 +37,23 @@ conn.commit()
 
 # Create a table for user_address relationship
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS user_address (
-        user_id INTEGER,
-        address_id INTEGER,
-        FOREIGN KEY (user_id) REFERENCES users (id),
-        FOREIGN KEY (address_id) REFERENCES addresses (id)
+    CREATE TABLE IF NOT EXISTS user_endereco (
+        id_usuario INTEGER,
+        id_endereco INTEGER,
+        FOREIGN KEY (id_usuario) REFERENCES users (id),
+        FOREIGN KEY (id_endereco) REFERENCES enderecos (id)
     )
 ''')
 conn.commit()
 
-# Commit the changes to the database
+
+# Create the inventory table
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS inventario (
+        id_produto TEXT PRIMARY KEY,
+        estoque INTEGER
+    )
+''')
 conn.commit()
 
-# Close the database connection
 conn.close()
