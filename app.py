@@ -43,7 +43,7 @@ def signup():
     fields = ['new-name', 'new-user', 'email', 'password', 'repeat-password']
     user_data = {}
     for field in fields:
-        if field == 'new-user':
+        if field == 'email':
             user_data[field] = request.form.get(field).lower()
         else:
             user_data[field] = request.form.get(field)
