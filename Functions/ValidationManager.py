@@ -44,7 +44,7 @@ class ValidationManager:
             return False
 
         manager = QueryManager()
-        existing_username = manager.exists_value('users', 'user', username)
+        existing_username = manager.exists_value('users', 'username', username)
         if existing_username:
             return False
 
