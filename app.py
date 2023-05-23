@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, session
 from db.QueryManager import QueryManager
 from Functions.ValidationManager import ValidationManager
 from config import SECRET_KEY, STRIPE_KEY
+import db.setup
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY

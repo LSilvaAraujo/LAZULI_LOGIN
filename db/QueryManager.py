@@ -12,7 +12,7 @@ class QueryManager:
         self.conn.close()
 
     def valid_credentials(self, username, password):
-        self.cursor.execute('SELECT senha FROM users WHERE user = ?',
+        self.cursor.execute('SELECT senha FROM users WHERE username = ?',
                             (username,))
         result = self.cursor.fetchone()
         if result is None:
@@ -34,7 +34,7 @@ class QueryManager:
         hash_data = hashing_manager.get_data()
         data['password'] = hash_data['password']
 
-        self.cursor.execute('INSERT INTO users (user, nome, email, senha) '
+        self.cursor.execute('INSERT INTO users (username, nome, email, senha) '
                             'VALUES (?,?,?,?)',
                             (data['new-user'], data['new-name'], data['email'],
                              data['password']))
@@ -45,7 +45,7 @@ class QueryManager:
         # ['new-name', 'new-user', 'email', 'password', 'repeat-password']
 
     def get_password(self, username):
-        self.cursor.execute('SELECT senha FROM users WHERE user = ?', (username,))
+        self.cursor.execute('SELECT senha FROM users WHERE username = ?', (username,))
         result = self.cursor.fetchone()
         self.close_connections()
         return result
