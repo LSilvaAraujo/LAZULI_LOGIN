@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER*/
+.header{
+    background-color: #041540;
+    padding: 1%;
+}
+
+.links-header {
+    margin-left: 52%;
+}
+
+.header a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1%;
+}
+
+.header a:hover{
+    color: #d7d7d7;
+}
+
+.header ion-icon:hover{
+    color: #d7d7d7;
+}
+
+.header .user{
+    margin-right: 1%;
+}
+
+#div-busca input{
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.4rem;
+    margin-left: 1% ;
+    width: 15%;
+}
+
+.user ion-icon {
+    color: white;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.cart ion-icon {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.search ion-icon {
+    color: #041540;
+    position: relative;
+    left: -25px;
+    top: 3px;
+}
+.search ion-icon:hover {
+    color: #2552ce;
+    cursor: pointer;
+}
+
+#features-charts {
+    display: block;
+    margin-top: 33%;
+    text-align: center ;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+#features-charts span {
+    background-color: lightgrey;
+    border-radius: 20px;
+    border-style: none;
+    /*padding-top: 4%;*/
+    /*padding-left: 3%;*/
+    /*margin-right: 0.3%;*/
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*PRODUCTS*/
+
+#products{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+#products img {
+    width: 80%;
+    margin-top: 2%;
+    border-radius: 17px;
+    height: 30em;
+    display: block;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#products-bg {
+    display: flex;
+    flex-direction: row;
+}
