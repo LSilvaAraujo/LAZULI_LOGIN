@@ -1,0 +1,155 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER*/
+.header{
+    background-color: #041540;
+    padding: 1%;
+}
+
+.links-header {
+    margin-left: 52%;
+}
+
+.body-bg img {
+    background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.header a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1%;
+}
+
+.header a:hover{
+    color: #d7d7d7;
+}
+
+.header ion-icon:hover{
+    color: #d7d7d7;
+}
+
+.header .user{
+    margin-right: 1%;
+}
+
+#div-busca input{
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.4rem;
+    margin-left: 1% ;
+    width: 15%;
+}
+
+.user ion-icon {
+    color: white;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.cart ion-icon {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.search ion-icon {
+    color: #041540;
+    position: relative;
+    left: -25px;
+    top: 3px;
+}
+.search ion-icon:hover {
+    color: #2552ce;
+    cursor: pointer;
+}
+
+#features-charts {
+    display: block;
+    margin-top: 33%;
+    text-align: center ;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+#features-charts span {
+    background-color: lightgrey;
+    border-radius: 20px;
+    border-style: none;
+    /*padding-top: 4%;*/
+    /*padding-left: 3%;*/
+    /*margin-right: 0.3%;*/
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*PEDIDOS*/
+
+#requests {
+    background-color: #e3e3e3;
+    border-radius: 17px;
+    margin: 2%;
+    padding: 0.1rem 1rem;
+    margin-bottom: auto;
+}
+
+ h3, .body-request .delivery {
+    text-decoration: underline;
+}
+ .body-request .delivery {
+     font-size: x-large;
+ }
+
+ .body-request {
+     background-color: rgba(0, 55, 165, 0.35);
+     border-radius: 17px;
+     width: 60%;
+     margin-left: 20%;
+     margin-bottom: auto;
+ }
+
+ .body-request span {
+     color: #FFFFFF ;
+     font-size: large;
+     margin-left: 3%;
+
+ }
+ .book {
+     margin-left: 2%;
+     margin-top: 5%;
+ }
+ .book img {
+     width: 10%;
+     border-radius: 17px;
+ }
+ .games {
+     margin-top: 3%;
+     margin-left: 2%;
+ }
+
+ .games img {
+     width: 10%;
+     border-radius: 17px;
+ }
+
+ .book .price, .games .price {
+     color: #070571;
+     font-weight: bold;
+ }
+
+ .total-itens span {
+     background-color: #071430;
+     border: none;
+     border-radius: 17px;
+ }
+
+ .total-itens {
+     text-align: end;
+ }
