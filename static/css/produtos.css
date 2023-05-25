@@ -76,9 +76,6 @@ body {
     background-color: lightgrey;
     border-radius: 20px;
     border-style: none;
-    /*padding-top: 4%;*/
-    /*padding-left: 3%;*/
-    /*margin-right: 0.3%;*/
     text-align: center;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -104,4 +101,15 @@ body {
 #products-bg {
     display: flex;
     flex-direction: row;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+#products-bg button {
+    border-radius: 17px;
+    border: none;
+    background-color: #0037A5;
+    color: #ffff;
+    padding: 0.5rem;
+    cursor: pointer;
 }
