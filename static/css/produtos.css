@@ -100,16 +100,56 @@ body {
 
 #products-bg {
     display: flex;
-    flex-direction: row;
-    margin-left: 10%;
     margin-top: 2%;
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 17px;
+    text-align: center;
+    background-color: rgba(0, 55, 165, 0.35);
 }
 
-#products-bg button {
-    border-radius: 17px;
-    border: none;
-    background-color: #0037A5;
-    color: #ffff;
-    padding: 0.5rem;
-    cursor: pointer;
+.table-products {
+    padding: 3%;
+}
+.produtos .loucos-livros img {
+    width: 90%;
+}
+.produtos .guarda-chuvas img {
+    width: 98%;
+}
+.produtos .paradoxo img {
+    width: 90%;
+}
+.produtos .melhor-filmes img{
+    width: 60%;
+}
+.produtos .final-fantasy img{
+    width: 45%;
+}
+.produtos .red-dead img{
+    width: 85%;
+}
+.produtos .resident-evil img{
+    width: 65%;
+}
+.produtos .papers-please img{
+    width: 60%;
+}
+
+.products-titles {
+    color: #FFFFFF;
+    font-size: 90%;
+}
+
+.products-prices{
+    color: #070571;
+}
+
+.recommendations{
+    margin-left: 10%;
+    color: #070571;
+}
+
+.recommendations ion-icon{
+    font-size: 110%;
 }

@@ -9,15 +9,8 @@ body {
 }
 
 .links-header {
-    margin-left: 52%;
+    margin-left: 25%;
 }
-
-.body-bg img {
-    background-color: gray;
-    border-radius: 10px;
-    width: 100%;
-}
-
 
 .header a{
     text-decoration: none;
@@ -83,9 +76,6 @@ body {
     background-color: lightgrey;
     border-radius: 20px;
     border-style: none;
-    /*padding-top: 4%;*/
-    /*padding-left: 3%;*/
-    /*margin-right: 0.3%;*/
     text-align: center;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -97,7 +87,6 @@ body {
     border-radius: 17px;
     margin: 2%;
     padding: 0.1rem 1rem;
-    margin-bottom: auto;
 }
 
  h3, .body-request .delivery {
