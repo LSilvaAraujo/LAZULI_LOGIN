@@ -1,15 +1,15 @@
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    color: #041540;
 }
 
+/*HEADER*/
 .header{
     background-color: #041540;
     padding: 1%;
 }
 
 .links-header {
-    margin-left: 52%;
+    margin-left: 25%;
 }
 
 .header a{
@@ -80,56 +80,65 @@ body{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/*PEDIDOS*/
 
-#profile-user {
-    margin-left: 1%;
-    margin-right: 1%;
-    background-color: #F6F6F6;
+#requests {
+    background-color: #e3e3e3;
     border-radius: 17px;
-    margin-top: 7%;
+    margin: 2%;
+    padding: 0.1rem 1rem;
 }
 
-#profile-user h3{
+ h3, .body-request .delivery {
     text-decoration: underline;
-    margin-left: 2%;
-    padding-top: 1%;
-    font-size: 160%;
 }
+ .body-request .delivery {
+     font-size: x-large;
+ }
 
-.buttons-profile{
-    display: flex;
-    width: 95vw;
-    justify-content: space-around;
-    margin-top: 6%
+ .body-request {
+     background-color: rgba(0, 55, 165, 0.35);
+     border-radius: 17px;
+     width: 60%;
+     margin-left: 20%;
+     margin-bottom: auto;
+ }
 
-}
+ .body-request span {
+     color: #FFFFFF ;
+     font-size: large;
+     margin-left: 3%;
 
-.buttons-profile span {
-    text-decoration: underline;
-    background-color: #041540;
-    padding: 0.7% 9%;
-    color: #F6F6F6;
-    border-radius: 20px;
-    margin-bottom: 5%;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    cursor: pointer;
-}
+ }
+ .book {
+     margin-left: 2%;
+     margin-top: 5%;
+ }
+ .book img {
+     width: 10%;
+     border-radius: 17px;
+ }
+ .games {
+     margin-top: 3%;
+     margin-left: 2%;
+ }
 
-.buttons-profile a {
-    text-decoration: none;
-    color: #ffffff;
-}
+ .games img {
+     width: 10%;
+     border-radius: 17px;
+ }
 
-.buttons-profile span:hover {
-    background-color: rgb(1, 30, 63);
-    color: #F6F6F6;
-}
+ .book .price, .games .price {
+     color: #070571;
+     font-weight: bold;
+ }
 
-.buttons-profile ion-icon{
-    width: 100%;
-    font-size: 5em;
-}
+ .total-itens span {
+     background-color: #071430;
+     border: none;
+     border-radius: 17px;
+ }
 
-.buttons-profile .logout {
-    width: 160%;
-}
+ .total-itens {
+     text-align: end;
+ }
