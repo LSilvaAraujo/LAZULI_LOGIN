@@ -64,3 +64,11 @@
     width: 100px;
     float: right;
 }
+
+.box button:hover {
+    background-color: #002c86;
+}
+
+.box button:nth-of-type(3):hover {
+    color: #bbbbbb;
+}
