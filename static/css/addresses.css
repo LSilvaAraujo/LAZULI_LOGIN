@@ -1,74 +1,66 @@
-/* Estilos CSS aqui */
-
-/* Seleciona todos os elementos da página */
 * {
-  box-sizing: border-box; /* Faz com que a largura e a altura dos elementos incluam o padding e a border */
+    box-sizing: border-box;
 }
 
-/* Seleciona o elemento com a classe container */
+
 .container {
-  width: 80%; /* Define a largura do elemento como 80% da largura da página */
-  margin: 0 auto; /* Centraliza o elemento na página */
+    width: 80%;
+    margin: 0 auto;
 }
 
-/* Seleciona o elemento com a classe box */
+
 .box {
-  width: 60%; /* Define a largura do elemento como 60% da largura do elemento pai (container) */
-  height: 500px; /* Define a altura do elemento como 500 pixels */
-  margin: 20px auto; /* Define uma margem de 20 pixels em cima e em baixo e centraliza o elemento na página */
-  padding: 20px; /* Define uma margem interna de 20 pixels */
-  border-radius: 17px; /* Arredonda as bordas do elemento com um raio de 10 pixels */
-  background-color: #ececec; /* Define a cor de fundo do elemento como cinza claro */
+    width: 60%;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: #ececec;
     color: #061c5d;
 }
 
-/* Seleciona o elemento h1 dentro do elemento com a classe box */
+
 .box span {
-  text-align: left; /* Alinha o texto à esquerda */
-  text-decoration: underline; /* Sublinha o texto */
+    text-align: left;
+    text-decoration: underline;
     font-size: large;
 }
 
-/* Seleciona o elemento button dentro do elemento com a classe box */
+
 .box button {
-  width: 200px; /* Define a largura do elemento como 200 pixels */
-  height: 40px; /* Define a altura do elemento como 40 pixels */
-  margin: 10px; /* Define uma margem de 10 pixels em todos os lados */
-  border: none; /* Remove a borda do elemento */
-  border-radius: 17px; /* Arredonda as bordas do elemento com um raio de 5 pixels */
-  color: white; /* Define a cor do texto como branco */
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 17px;
+    color: white;
 }
 
-/* Seleciona o primeiro elemento button dentro do elemento com a classe box */
 .box button:first-of-type {
-  background-color: #061c5d; /* Define a cor de fundo do elemento como verde */
+    background-color: #061c5d;
 }
 
-/* Seleciona o segundo elemento button dentro do elemento com a classe box */
 .box button:nth-of-type(2) {
-  background-color: #061c5d; /* Define a cor de fundo do elemento como azul */
+    background-color: #061c5d;
 }
 
-/* Seleciona o terceiro elemento button dentro do elemento com a classe box */
 .box button:nth-of-type(3) {
-  background-color: #d0d0d0; /* Define a cor de fundo do elemento como cinza escuro */
+    background-color: #d0d0d0;
     color: #061c5d;
 }
 
-/* Seleciona o elemento table dentro do elemento com a classe box */
 .box table {
-  width: 100%; /* Define a largura do elemento como 100% da largura do elemento pai (box) */
-  border-collapse: collapse; /* Remove o espaço entre as células da tabela */
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* Seleciona os elementos td dentro do elemento table */
+
 .box table td {
-  padding: 10px; /* Define uma margem interna de 10 pixels */
-  border-bottom: 1px solid gray; /* Define uma borda de 1 pixel de espessura com cor cinza na parte de baixo da célula */
+    padding: 10px;
+    border-bottom: 1px solid gray;
 }
 
-/* Seleciona os elementos button dentro do elemento table */
 .box table button {
-  width: 100px; /* Define a largura do elemento como 100 pixels */
-  float: right; /* Posiciona o elemento à direita da célula */
+    width: 100px;
+    float: right;
 }
