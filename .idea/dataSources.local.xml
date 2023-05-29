@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PY-223.8617.48">
+    <data-source name="lazuli" uuid="63512731-f515-432d-b0d9-7449e5035976">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
