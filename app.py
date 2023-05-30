@@ -16,6 +16,14 @@ def home_page():
     return redirect("/")
 
 
+@app.route('/home', methods=['POST'])
+def fale_conosco():
+    print(QueryManager().get_email(session['username']))
+    if len(session) != 0:
+        return render_template("home/home.html")
+    return redirect("/")
+
+
 @app.route('/')
 def show_login():
     return render_template("login/login.html")

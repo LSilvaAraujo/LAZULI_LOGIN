@@ -49,3 +49,17 @@ class QueryManager:
         result = self.cursor.fetchone()
         self.close_connections()
         return result
+
+    def get_contact(self, username):
+        self.cursor.execute('SELECT username, nome, email FROM users WHERE username = ?', (username,))
+        result = self.cursor.fetchone()
+        self.close_connections()
+        return result
+
+    def register_product(self, data):
+        self.cursor.execute('INSERT INTO produtos (id_produto, estoque, nome, descricao) '
+                            'VALUES (?,?,?,?)',
+                            (data['id_produto'], data['estoque'], data['nome'],
+                             data['descricao']))
+        self.conn.commit()
+        self.close_connections()

@@ -16,7 +16,6 @@ cursor.execute('''
         senha TEXT NOT NULL
     )
 ''')
-conn.commit()
 
 # Create a table for addresses
 cursor.execute('''
@@ -32,7 +31,6 @@ cursor.execute('''
         complemento TEXT NOT NULL
     )
 ''')
-conn.commit()
 
 # Create a table for user_address relationship
 cursor.execute('''
@@ -43,17 +41,6 @@ cursor.execute('''
         FOREIGN KEY (id_endereco_fk) REFERENCES enderecos (id_endereco)
     )
 ''')
-conn.commit()
-
-# Create the inventory table
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS inventario (
-        id_produto TEXT PRIMARY KEY,
-        estoque INTEGER
-    )
-''')
-
-conn.commit()
 
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS pedidos (
@@ -64,11 +51,9 @@ cursor.execute('''
         uuid TEXT NOT NULL,
         FOREIGN KEY (id_user_fk) REFERENCES users (id_user),
         FOREIGN KEY (id_endereco_fk) REFERENCES enderecos (id_endereco),
-        FOREIGN KEY (id_produto_fk) REFERENCES inventario (id_produto)
+        FOREIGN KEY (id_produto_fk) REFERENCES produtos (id_produto)
     )
 ''')
-
-conn.commit()
 
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS produtos_pedido(
@@ -76,6 +61,23 @@ produtos_pedido_id INTEGER PRIMARY KEY AUTOINCREMENT,
 uuid_fk TEXT NOT NULL,
 FOREIGN KEY (uuid_fk) REFERENCES pedidos (uuid)
 )''')
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS livros(
+id_livro TEXT NOT NULL PRIMARY KEY,
+nome TEXT NOT NULL,
+descricao TEXT NOT NULL,
+recursos TEXT NOT NULL)
+''')
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS produtos(
+id_produto TEXT NOT NULL PRIMARY KEY,
+estoque INTEGER NOT NULL,
+nome TEXT NOT NULL,
+descricao TEXT NOT NULL)
+''')
+
 conn.commit()
 
 conn.close()
