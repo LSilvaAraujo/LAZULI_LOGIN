@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    background-color: #041540;
+    padding: 1%;
+}
+
+.links-header {
+    margin-left: 52%;
+}
+
+.body-bg img {
+    background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.header a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1%;
+}
+
+.header a:hover{
+    color: #d7d7d7;
+}
+
+.header ion-icon:hover{
+    color: #d7d7d7;
+}
+
+.header .user{
+    margin-right: 1%;
+}
+
+#div-busca input{
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.4rem;
+    margin-left: 1% ;
+    width: 15%;
+}
+.user ion-icon {
+    color: white;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.cart ion-icon {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.search ion-icon {
+    color: #041540;
+    position: relative;
+    left: -25px;
+    top: 3px;
+}
+.search ion-icon:hover {
+    color: #2552ce;
+    cursor: pointer;
+}
+
+#features-charts {
+    display: block;
+    margin-top: 33%;
+    text-align: center ;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+#features-charts span {
+    background-color: lightgrey;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30%;
+}
+
+
+.box {
+    width: 60%;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: #ececec;
+    color: #061c5d;
+}
+
+
+.box span {
+    text-align: left;
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+.box button {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+.box button:first-of-type {
+    background-color: #061c5d;
+}
+
+.box button:nth-of-type(2) {
+    background-color: #061c5d;
+}
+
+.box button:nth-of-type(3) {
+    background-color: #d0d0d0;
+    color: #061c5d;
+}
+
+.box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.box table td {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.box table button {
+    width: 100px;
+    float: right;
+}
+
+.box button:hover {
+    background-color: #002c86;
+}
+
+.box button:nth-of-type(3):hover {
+    color: #bbbbbb;
+}
+
+/*CSS do Formulário*/
+
+.form {
+    color: #061c5d;
+    position: relative;
+    left: 30%;
+    margin-top: 2%;
+    background-color: #ECECECFF;
+    padding: 10px;
+    border-radius: 15px;
+    width: 48%;
+}
+
+fieldset {
+    border: 3px solid #061c5d;
+}
+
+legend {
+    border: 1px solid #061c5d;
+    padding: 10px;
+    text-align: center;
+    background-color: #061c5d;
+    border-radius: 10px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    color: #061c5d;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #2345af;
+}
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    background-color: #061c5d;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+#submit:hover {
+    background-color: #002c86;
+}
+
+.form legend {
+    color: #FFFFFFFF;
+}
