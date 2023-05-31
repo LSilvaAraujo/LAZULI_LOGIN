@@ -155,8 +155,8 @@ body {
     font-size: 110%;
 }
 .products-cart button {
-     background-color: #070571;
-     color: #ffff;
+    background-color: #070571;
+    color: #ffff;
     border: none;
     border-radius: 10px;
     padding: 3%;
@@ -165,4 +165,19 @@ body {
 
 .products-cart button:hover{
     background-color: #03013f;
+}
+
+/*Visualizar produtos*/
+
+.table-products2 {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-titles2 {
+    color: #fff ;
 }
