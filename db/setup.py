@@ -62,13 +62,6 @@ uuid_fk TEXT NOT NULL,
 FOREIGN KEY (uuid_fk) REFERENCES pedidos (uuid)
 )''')
 
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS livros(
-id_livro TEXT NOT NULL PRIMARY KEY,
-nome TEXT NOT NULL,
-descricao TEXT NOT NULL,
-recursos TEXT NOT NULL)
-''')
 
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS produtos(
