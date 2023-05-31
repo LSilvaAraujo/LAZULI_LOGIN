@@ -51,7 +51,7 @@ class QueryManager:
         return result
 
     def get_contact(self, username):
-        self.cursor.execute('SELECT username, nome, email FROM users WHERE username = ?', (username,))
+        self.cursor.execute('SELECT nome, email FROM users WHERE username = ?', (username,))
         result = self.cursor.fetchone()
         self.close_connections()
         return result

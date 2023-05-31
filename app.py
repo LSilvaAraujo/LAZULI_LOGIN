@@ -1,12 +1,21 @@
 import stripe
 from flask import Flask, render_template, request, redirect, session
+from flask_mail import Mail, Message
 from db.QueryManager import QueryManager
 from Functions.ValidationManager import ValidationManager
-from config import SECRET_KEY, STRIPE_KEY
+from config import SECRET_KEY, MAIL_KEY
 import db.setup
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'atendimentocliente.lazuli@gmail.com'
+app.config['MAIL_PASSWORD'] = MAIL_KEY
+
+mail = Mail(app)
 
 
 @app.route('/home')
@@ -18,10 +27,21 @@ def home_page():
 
 @app.route('/home', methods=['POST'])
 def fale_conosco():
-    print(QueryManager().get_email(session['username']))
     if len(session) != 0:
-        return render_template("home/home.html")
-    return redirect("/")
+        query_manager = QueryManager()
+
+        userData = query_manager.get_contact(session['username'])
+
+        msg = Message('Suporte Lazuli', sender=app.config['MAIL_USERNAME'], recipients=[userData[1]])
+        msg.body = "Caro(a) {}, gostaria de ressaltar a importância do seu contato a nós, ao permanecer " \
+                   "fiel a nossos serviços. Queremos proporcionar um atendimento de qualidade e que possa " \
+                   "proporcionar uma experiência agradável a todos nossos clientes. Espero que tenha um ótimo dia e " \
+                   "que possa continuar nos ajudando com seu apoio." \
+                   "'Lazuli: Do geek para a cultura.'".format(userData[0])
+
+        mail.send(msg)
+
+    return redirect("/home")
 
 
 @app.route('/')
@@ -40,7 +60,6 @@ def login():
         return redirect('/home')
     else:
         return show_login()
-    # TODO: implementação hash & salt para senhas armazenadas no banco de dados
 
 
 @app.route('/new_user')
@@ -67,6 +86,23 @@ def signup():
         return redirect('/')
     else:
         return show_signup()
+
+
+@app.route('/perfil')
+def show_profile():
+    if len(session) != 0:
+        return render_template('perfil/perfil.html')
+
+    return redirect('/home')
+
+
+@app.route('/pedidos')
+def show_orders():
+    if len(session) != 0:
+        print(session)
+        return render_template('pedidos/pedidos.html')
+
+    return redirect('/home')
 
 
 @app.route('/logout')
