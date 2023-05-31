@@ -36,20 +36,21 @@
     <div class="body-request">
         <span class="delivery">Entrega prevista para 09/06/2023</span>
         <div class="book">
-            <img src="../../static/images/melhor-filmes.png" alt="">
+            <img src="../../static/images/melhor-filmes.png" alt="Melhor do que nos filmes">
             <span>Melhor que nos filmes</span>
-            <span class="price">R$ 65,90</span>
+            <span class="price" id="input1" onkeyup="sum()">65,90</span>
         </div>
         <div class="games">
-            <img src="../../static/images/red-dead.png" alt="">
+            <img src="../../static/images/red-dead.png" alt="Red Dead Redemption">
             <span>Red Dead Redemption II</span>
-            <span class="price">R$ 298,99</span>
+            <span class="price" id="input2" onkeyup="sum()">298,99</span>
         </div>
         <div class="total-itens">
-            <span>Total: R$ 364,89</span>
+            <span id="result">Total:</span>
         </div>
     </div>
 </div>
+<script src="pedidos.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

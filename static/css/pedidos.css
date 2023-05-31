@@ -102,13 +102,13 @@ body {
      width: 60%;
      margin-left: 20%;
      margin-bottom: auto;
+     padding: 2% 4%;
  }
 
  .body-request span {
      color: #FFFFFF ;
      font-size: large;
      margin-left: 3%;
-
  }
  .book {
      margin-left: 2%;
@@ -133,12 +133,7 @@ body {
      font-weight: bold;
  }
 
- .total-itens span {
-     background-color: #071430;
-     border: none;
-     border-radius: 17px;
- }
-
  .total-itens {
      text-align: end;
  }
+
