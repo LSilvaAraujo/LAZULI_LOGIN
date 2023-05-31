@@ -6,6 +6,7 @@
 .container {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 30%;
 }
 
 
@@ -71,4 +72,87 @@
 
 .box button:nth-of-type(3):hover {
     color: #bbbbbb;
+}
+
+/*CSS do Formulário*/
+
+.form {
+    color: #061c5d;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ECECECFF;
+    padding: 15px;
+    border-radius: 15px;
+    width: 48%;
+}
+
+fieldset {
+    border: 3px solid #061c5d;
+}
+
+legend {
+    border: 1px solid #061c5d;
+    padding: 10px;
+    text-align: center;
+    background-color: #061c5d;
+    border-radius: 10px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    color: #061c5d;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #2345af;
+}
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    background-color: #061c5d;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+#submit:hover {
+    background-color: #002c86;
+}
+
+.form legend {
+    color: #FFFFFFFF;
 }
