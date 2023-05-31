@@ -1,7 +1,92 @@
 * {
     box-sizing: border-box;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
+.header{
+    background-color: #041540;
+    padding: 1%;
+}
+
+.links-header {
+    margin-left: 52%;
+}
+
+.body-bg img {
+    background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.header a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 1%;
+}
+
+.header a:hover{
+    color: #d7d7d7;
+}
+
+.header ion-icon:hover{
+    color: #d7d7d7;
+}
+
+.header .user{
+    margin-right: 1%;
+}
+
+#div-busca input{
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.4rem;
+    margin-left: 1% ;
+    width: 15%;
+}
+.user ion-icon {
+    color: white;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.cart ion-icon {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.search ion-icon {
+    color: #041540;
+    position: relative;
+    left: -25px;
+    top: 3px;
+}
+.search ion-icon:hover {
+    color: #2552ce;
+    cursor: pointer;
+}
+
+#features-charts {
+    display: block;
+    margin-top: 33%;
+    text-align: center ;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+#features-charts span {
+    background-color: lightgrey;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 .container {
     width: 80%;
@@ -35,6 +120,7 @@
     border: none;
     border-radius: 17px;
     color: white;
+    cursor: pointer;
 }
 
 .box button:first-of-type {
@@ -79,11 +165,10 @@
 .form {
     color: #061c5d;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 30%;
+    margin-top: 2%;
     background-color: #ECECECFF;
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     width: 48%;
 }

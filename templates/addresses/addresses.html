@@ -20,88 +20,60 @@
 
 </style>
 <body>
-<div class="container">
-    <div class="box">
-        <span class="title">Endereços</span><br>
-        <button>Adicionar novo endereço</button>
-        <table>
-            <tr>
-                <td>Nome</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>CPF ou CNPJ</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Endereço</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>País</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>CEP</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Telefone</td>
-                <td></td>
-            </tr>
-        </table>
-        <button>Editar</button>
-        <button>Apagar</button>
+    <div class="header">
+                <span class="links-header">
+                    <span><a href="#">Início</a></span>
+                    <span><a href="../produtos/produtos.html">Loja</a></span>
+                    <span><a href="#features-charts">Fale conosco</a></span>
+                    <span id="div-busca">
+                        <input type="text" id="txt-busca" placeholder="">
+                    </span>
+                    <span class="search"><ion-icon name="search"></ion-icon></span>
+                    <span class="cart"><ion-icon name="cart"></ion-icon><a href="#"></a></span>
+                    <span class="user"><a href="../perfil/perfil.html"><ion-icon name="person"></ion-icon></a></span>
+                </span>
     </div>
-</div>
-<div class="form">
-    <form action="">
-        <fieldset>
-            <legend><b>Fórmulário de Endereço</b></legend>
-            <br>
-            <div class="inputBox">
-                <input type="text" name="nome" id="nome" class="inputUser" required>
-                <label for="nome" class="labelInput">Nome completo</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="text" name="email" id="email" class="inputUser" required>
-                <label for="email" class="labelInput">Email</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                <label for="cpf" class="labelInput">CPF ou CNPJ</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                <label for="endereco" class="labelInput">Endereço</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="text" name="country" id="country" class="inputUser" required>
-                <label for="country" class="labelInput">País</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="text" name="cep" id="cep" class="inputUser" required>
-                <label for="cep" class="labelInput">CEP</label>
-            </div>
-            <br><br>
-            <div class="inputBox">
-                <input type="tel" name="phone" id="phone" class="inputUser" required>
-                <label for="phone" class="labelInput">Telefone</label>
-            </div>
-            <br><br>
-            <input type="submit" name="submit" id="submit">
-        </fieldset>
-    </form>
-</div>
+    <div class="container">
+
+        <div class="box">
+            <span class="title">Endereços</span><br>
+            <a href="new-address.html">
+                <button>Adicionar novo endereço</button>
+            </a>
+            <table>
+                <tr>
+                    <td>Nome</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>CPF ou CNPJ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Endereço</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>País</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>CEP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Telefone</td>
+                    <td></td>
+                </tr>
+            </table>
+            <button>Editar</button>
+            <button>Apagar</button>
+        </div>
+    </div>
 </body>
 </html>
 
