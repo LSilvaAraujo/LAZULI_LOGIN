@@ -1,1 +1,3 @@
 SECRET_KEY = b'RtTh8TJy1-GIrnrLmhwBBbP-XPNv1Ujha2jt5z__rzo='
+STRIPE_KEY = 'sk_test_51N8ti0AAAJBqCOVghXRIrvdvXyK67Z5F1X8ppWXuH6ZGNFBqNaiqfXEssRKHEAbXPST95EgTyxsAvr8x9bpV4w9m005B8C97bw'
+MAIL_KEY = 'pgkyeefqzhcuwqpz'
