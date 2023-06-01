@@ -153,20 +153,31 @@ def checkout(stripe_id):
         mode='payment'
     )
 
+    print(checkoutSession.url)
+
     return redirect(checkoutSession.url)
 
 
 @app.route('/success/<string:stripe_id>')
 def success(stripe_id):
+    if len(session) != 0:
+        redirect('/')
     query_manager = QueryManager()
     query_manager.register_order(query_manager.get_id_user(session['username']), stripe_id)
 
-    return redirect('/perfil')
+    return redirect('/perfil/perfil.html')
+
+
+@app.route('/view_products')
+def view_productss():
+    return render_template('req.html')
 
 
 @app.route('/cancel')
 def cancel():
-    return redirect('/perfil')
+    if len(session) != 0:
+        redirect('/')
+    return redirect('/perfil/perfil.html')
 
 
 @app.route('/logout')
