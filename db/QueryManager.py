@@ -50,8 +50,14 @@ class QueryManager:
         self.close_connections()
         return result
 
-    def get_contact(self, username):
+    def get_user_data(self, username):
         self.cursor.execute('SELECT nome, email FROM users WHERE username = ?', (username,))
+        result = self.cursor.fetchone()
+        self.close_connections()
+        return result
+
+    def get_id_user(self, username):
+        self.cursor.execute('SELECT id_user FROM users WHERE username = ?', (username,))
         result = self.cursor.fetchone()
         self.close_connections()
         return result
@@ -63,3 +69,59 @@ class QueryManager:
                              data['descricao']))
         self.conn.commit()
         self.close_connections()
+
+    def register_address(self, data):
+        self.cursor.execute('SELECT id_user FROM users WHERE username = ?', (data['username'],))
+        id_user = self.cursor.fetchone()[0]
+
+        # Check if the user already has an address
+        self.cursor.execute('SELECT id_endereco_fk, id_usuario_endereco FROM user_endereco WHERE id_usuario_fk = ?',
+                            (id_user,))
+        existing_address = self.cursor.fetchone()
+
+        if existing_address:
+            id_endereco_fk, id_usuario_endereco = existing_address
+            self.cursor.execute(
+                'UPDATE enderecos SET nome = ?, email = ?, cpf = ?, endereco = ?, pais = ?, cep = ?, telefone = ? WHERE id_endereco = ?',
+                (
+                    data['nome'], data['email'], data['cpf'], data['endereco'], data['pais'], data['cep'],
+                    data['telefone'],
+                    id_endereco_fk))
+            self.cursor.execute('UPDATE user_endereco SET id_endereco_fk = ? WHERE id_usuario_endereco = ?',
+                                (id_endereco_fk, id_usuario_endereco))
+        else:
+            self.cursor.execute(
+                'INSERT INTO enderecos (id_endereco, nome, email, cpf, endereco, pais, cep, telefone) VALUES (NULL,?,?,?,?,?,?,?)',
+                (data['nome'], data['email'], data['cpf'], data['endereco'], data['pais'], data['cep'],
+                 data['telefone']))
+            id_endereco_fk = self.cursor.lastrowid
+            self.cursor.execute(
+                'INSERT INTO user_endereco (id_usuario_endereco, id_usuario_fk, id_endereco_fk) VALUES (NULL,?,?)',
+                (id_user, id_endereco_fk))
+
+        self.conn.commit()
+        self.close_connections()
+
+    def register_order(self, id_user, id_produto):
+
+        self.cursor.execute('''
+            SELECT id_endereco_fk FROM user_endereco
+            WHERE id_usuario_fk = ?
+            ''', (id_user,))
+        address_id = self.cursor.fetchone()[0]
+
+        self.cursor.execute('''
+            INSERT INTO pedidos (id_user_fk, id_endereco_fk, id_produto_fk)
+            VALUES (?, ?, ?)
+            ''', (id_user, address_id, id_produto))
+
+        self.cursor.execute('''
+                UPDATE produtos
+                SET estoque = estoque - 1
+                WHERE id_produto = ?
+                ''', (id_produto,))
+
+        self.conn.commit()
+        self.close_connections()
+
+
