@@ -168,16 +168,24 @@ def success(stripe_id):
     return redirect('/perfil/perfil.html')
 
 
-@app.route('/view_products')
-def view_productss():
-    return render_template('req.html')
-
-
 @app.route('/cancel')
 def cancel():
     if len(session) != 0:
         redirect('/')
     return redirect('/perfil/perfil.html')
+
+
+@app.route('/home/home.html')
+def home():
+    if len(session) != 0:
+        return redirect('/home')
+    return redirect('/')
+
+@app.route('/produtos/produtos.html')
+def view_products():
+    if len(session) != 0:
+        return render_template('produtos/produtos.html')
+    return redirect('/')
 
 
 @app.route('/logout')
