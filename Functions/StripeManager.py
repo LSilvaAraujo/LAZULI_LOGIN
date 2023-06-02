@@ -1,11 +1,10 @@
 import stripe
 from db.QueryManager import QueryManager
-from config import STRIPE_KEY
+from sqlite3 import IntegrityError
 
 
 class StripeManager:
     def __init__(self):
-        stripe.api_key = STRIPE_KEY
         self.data = self.get_products()
         self.store_products()
 
@@ -23,4 +22,7 @@ class StripeManager:
     def store_products(self):
         query_manager = QueryManager()
         for product in self.data:
-            query_manager.register_product(product)
+            try:
+                query_manager.register_product(product)
+            except IntegrityError:
+                pass
